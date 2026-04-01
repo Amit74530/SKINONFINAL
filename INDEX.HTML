@@ -1,26 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skinon – Nutracosmetics & Anti-Ageing Solutions</title>
-    <meta name="description" content="Skinon - Premium nutracosmetics & anti-ageing supplements. Science-backed collagen elixirs, skin glow enhancers & metabolic boosters for ageless beauty. Vegan-friendly, clinically tested formulas for radiant skin from within.">
-    <meta name="keywords" content="nutracosmetics, anti-ageing supplements, collagen, skin care, beauty supplements, skin glow, weight management, vegan supplements">
-    <meta name="author" content="Skinon">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://skinon.com">
-    <meta property="og:title" content="Skinon – Nutracosmetics & Anti-Ageing Solutions">
-    <meta property="og:description" content="Premium nutracosmetics & anti-ageing supplements for ageless beauty and radiant skin from within.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.skinon.com">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!doctypehtml><html lang="en"><meta charset="UTF-8"><meta content="width=device-width,initial-scale=1"name="viewport"><title>Skinon – Nutracosmetics & Anti-Ageing Solutions</title><meta content="Skinon - Premium nutracosmetics & anti-ageing supplements. Science-backed collagen elixirs, skin glow enhancers & metabolic boosters for ageless beauty. Vegan-friendly, clinically tested formulas for radiant skin from within."name="description"><meta content="nutracosmetics, anti-ageing supplements, collagen, skin care, beauty supplements, skin glow, weight management, vegan supplements"name="keywords"><meta content="Skinon"name="author"><meta content="index, follow"name="robots"><link href="https://skinon.com"rel="canonical"><meta content="Skinon – Nutracosmetics & Anti-Ageing Solutions"property="og:title"><meta content="Premium nutracosmetics & anti-ageing supplements for ageless beauty and radiant skin from within."property="og:description"><meta content="website"property="og:type"><meta content="https://www.skinon.com"property="og:url"><link href="styles.css"rel="stylesheet"><link href="https://fonts.googleapis.com"rel="preconnect"><link href="https://fonts.gstatic.com"rel="preconnect"crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Lora:wght@400;500;600&display=swap"rel="stylesheet"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"rel="stylesheet">
 
-    <script type="application/ld+json">
-    {
+<style>
+/* ── Mobile Horizontal Scroll – Products Section ── */
+@media (max-width: 768px) {
+
+  /* Flex row, no wrapping, horizontal scroll */
+  #productGrid {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    overflow-y: visible !important;
+    gap: 16px !important;
+    padding: 12px 16px 20px !important;
+    margin: 0 -16px !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+  }
+
+  /* Hide scrollbar – WebKit */
+  #productGrid::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  /* Each card fixed width so they stay side by side */
+  #productGrid .product-card {
+    flex: 0 0 78vw !important;
+    max-width: 300px !important;
+    scroll-snap-align: start !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Dot indicators */
+  .product-scroll-dots {
+    display: flex !important;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 14px;
+  }
+
+  .product-scroll-dots .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ccc;
+    transition: background 0.3s, width 0.3s;
+    cursor: pointer;
+  }
+
+  .product-scroll-dots .dot.active {
+    background: #a0845c;
+    width: 22px;
+    border-radius: 4px;
+  }
+
+  /* Swipe hint label */
+  .product-swipe-hint {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 8px;
+    letter-spacing: 0.04em;
+  }
+}
+
+/* Hidden on desktop */
+.product-scroll-dots,
+.product-swipe-hint {
+  display: none;
+}
+</style>
+
+<script type="application/ld+json">{
         "@context": "https://schema.org",
         "@graph": [
             {
@@ -29,7 +84,7 @@
                 "description": "Advanced Formula with Hydrolyzed Collagen for reducing fine lines and wrinkles, improving skin elasticity, and enhancing skin hydration",
                 "brand": { "@type": "Brand", "name": "Skinon" },
                 "offers": { "@type": "Offer", "url": "https://amzn.in/d/7fDSH8P", "availability": "https://schema.org/InStock" },
-                "image": "https://skinon.com/products/anti-ageing.jpg"
+                "image": "https://skinon.com/products/anti-ageing.webp"
             },
             {
                 "@type": "Product",
@@ -37,7 +92,7 @@
                 "description": "With Vitamin C, E and Antioxidant Blend for brightening complexion, fighting free radical damage, and evening skin tone",
                 "brand": { "@type": "Brand", "name": "Skinon" },
                 "offers": { "@type": "Offer", "url": "https://amzn.in/d/7fDSH8P", "availability": "https://schema.org/InStock" },
-                "image": "https://skinon.com/products/skin-glow.jpg"
+                "image": "https://skinon.com/products/skin-glow.webp"
             },
             {
                 "@type": "Product",
@@ -45,7 +100,7 @@
                 "description": "Powered by L-Carnitine, Garcinia & ACV for weight management, boosting metabolism, and increasing energy levels",
                 "brand": { "@type": "Brand", "name": "Skinon" },
                 "offers": { "@type": "Offer", "url": "https://amzn.in/d/7fDSH8P", "availability": "https://schema.org/InStock" },
-                "image": "https://skinon.com/products/slim-product.jpg"
+                "image": "https://skinon.com/products/slim-product.webp"
             },
             {
                 "@type": "Review",
@@ -72,558 +127,131 @@
                 "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
             }
         ]
-    }
-    </script>
-</head>
+    }</script>
 
-<body>
+<header><div class="container header-container"><a href="#home"class="logo">Skin<span>on</span><span class="logo-nutra">Nutra</span></a> <button class="mobile-menu-btn"aria-label="Toggle navigation menu"><i class="fas fa-bars"></i></button><nav aria-label="Main navigation"><ul><li><a href="#home">Home</a><li><a href="#about">About</a><li><a href="#products">Products</a><li><a href="#certifications">Certification</a><li><a href="#benefits">Benefits</a><li><a href="#contact">Contact</a></ul></nav></div></header>
 
-<!-- ═══════════════════════════════════════════
-     HEADER — fixed navigation bar
-═══════════════════════════════════════════ -->
-<header>
-    <div class="container header-container">
-        <a href="#home" class="logo">Skin<span>on</span><span class="logo-nutra">Nutra</span></a>
-        <button class="mobile-menu-btn" aria-label="Toggle navigation menu">
-            <i class="fas fa-bars"></i>
-        </button>
-        <nav aria-label="Main navigation">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#certifications">Certification</a></li>
-                <li><a href="#benefits">Benefits</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+<section class="hero"id="home"><div class="container"><div class="fade-in hero-content"><h1>Bringing Skin Health Through Nutrition</h1><p>Beautiful, Glowing Skin starts with Skinon. Discover our science-backed nutracosmetics for ageless youth.</p><a href="#products"class="btn">Explore Our Products</a></div></div><div class="hero-video"><video autoplay class="hero-video-element"loop muted playsinline poster="fallback.jpg"preload="none"><source src="hero background video.webm"type="video/webm"><source src="hero-video.mp4"type="video/mp4"></video></div></section>
+
+<section class="about"id="about"><div class="container"><h2>Nutracosmetics for Ageless Youth</h2><div class="about-content"><div class="about-text"><div class="desktop-text"><p>At Skinon, we believe that true beauty begins with optimal nutrition. Our scientifically formulated nutracosmetics combine the power of nutrition with advanced skincare to deliver visible, lasting results.<p>Each product is crafted with premium ingredients that work from within to promote skin health, combat signs of aging, and enhance your natural radiance.<p>Our philosophy is simple: when you nourish your body with the right nutrients, your skin reflects that inner health and vitality.</div><div class="mobile-text"><p>Beautiful skin starts from within. Skinon's science-backed nutracosmetics nourish your body to reveal your natural radiance and combat aging at its source.</div></div><div class="about-image"><img alt="Woman using Skinon nutracosmetics products for radiant skin"class="about-img"loading="lazy"src="about-model.webp"></div></div></div></section>
+
+<section class="products"id="products">
+  <div class="container">
+    <h2>Our Premium Solutions</h2>
+    <div class="product-categories">
+      <button class="active category-btn"data-category="all">All Products</button>
+      <button class="category-btn"data-category="anti-aging">Anti-Ageing Solutions</button>
+      <button class="category-btn"data-category="skin-glow">Skin Glow &amp; Hydration</button>
+      <button class="category-btn"data-category="wellness">Weight Management &amp; Wellness</button>
     </div>
-</header>
 
+    <!-- Swipe hint – visible on mobile only via CSS -->
+    <p class="product-swipe-hint"><i class="fas fa-hand-point-right"></i> Swipe to explore</p>
 
-<!-- ═══════════════════════════════════════════
-     HERO — full-screen video background
-═══════════════════════════════════════════ -->
-<section class="hero" id="home">
-    <div class="container">
-        <div class="hero-content fade-in">
-            <h1>Bringing Skin Health Through Nutrition</h1>
-            <p>Beautiful, Glowing Skin starts with Skinon. Discover our science-backed nutracosmetics for ageless youth.</p>
-            <a href="#products" class="btn">Explore Our Products</a>
+    <div class="product-grid"id="productGrid">
+
+      <div class="fade-in product-card"data-category="anti-aging">
+        <a href="product-collagen.html"class="product-img-link">
+          <div class="product-image">
+            <img alt="Collagen Elixir – Anti-Ageing supplement bottle"class="product-img"loading="lazy"src="products/anti-ageing.webp">
+          </div>
+        </a>
+        <div class="product-info">
+          <a href="product-collagen.html"class="product-name-link"><h3>Collagen Elixir</h3></a>
+          <p class="product-category-tag">Anti-Ageing</p>
+          <p class="product-price">₹999 <span class="product-price-mrp">₹1,499</span></p>
+          <div class="product-card-actions">
+            <a href="product-collagen.html"class="view-details-btn">View Details</a>
+            <a href="https://amzn.in/d/7fDSH8P"class="amazon-btn buy-now-btn"rel="noopener"target="_blank"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+          </div>
         </div>
+      </div>
+
+      <div class="fade-in product-card"data-category="skin-glow">
+        <a href="product-glow.html"class="product-img-link">
+          <div class="product-image">
+            <img alt="Glow Enhancer – Vitamin C &amp; E skin brightening supplement"class="product-img"loading="lazy"src="products/skin-glow.webp">
+          </div>
+        </a>
+        <div class="product-info">
+          <a href="product-glow.html"class="product-name-link"><h3>Glow Enhancer</h3></a>
+          <p class="product-category-tag">Skin Glow &amp; Hydration</p>
+          <p class="product-price">₹849 <span class="product-price-mrp">₹1,299</span></p>
+          <div class="product-card-actions">
+            <a href="product-glow.html"class="view-details-btn">View Details</a>
+            <a href="https://amzn.in/d/7fDSH8P"class="amazon-btn buy-now-btn"rel="noopener"target="_blank"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="fade-in product-card"data-category="wellness">
+        <a href="product-metabolic.html"class="product-img-link">
+          <div class="product-image">
+            <img alt="Metabolic Boost – L-Carnitine &amp; ACV weight management supplement"class="product-img"loading="lazy"src="products/slim-product.webp">
+          </div>
+        </a>
+        <div class="product-info">
+          <a href="product-metabolic.html"class="product-name-link"><h3>Metabolic Boost</h3></a>
+          <p class="product-category-tag">Weight Management</p>
+          <p class="product-price">₹899 <span class="product-price-mrp">₹1,399</span></p>
+          <div class="product-card-actions">
+            <a href="product-metabolic.html"class="view-details-btn">View Details</a>
+            <a href="https://amzn.in/d/7fDSH8P"class="amazon-btn buy-now-btn"rel="noopener"target="_blank"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+          </div>
+        </div>
+      </div>
+
     </div>
-    <div class="hero-video">
-        <video autoplay muted loop playsinline preload="none" poster="fallback.jpg" class="hero-video-element">
-            <source src="hero background video.webm" type="video/webm">
-            <source src="hero-video.mp4" type="video/mp4">
-        </video>
+
+    <!-- Scroll indicator dots – visible on mobile only via CSS -->
+    <div class="product-scroll-dots">
+      <span class="dot active"data-index="0"></span>
+      <span class="dot"data-index="1"></span>
+      <span class="dot"data-index="2"></span>
     </div>
+  </div>
 </section>
 
+<section class="certifications-section"id="certifications"><div class="section-header"><h2>Quality Certifications</h2><p>Skinon Nutricosmetics products are manufactured with the highest quality standards, verified by independent third-party certifications.</div><div class="certifications-horizontal-container"><div class="certifications-row"><div class="cert-item"><div class="cert-icon"><i class="fas fa-shield-alt"></i></div><div class="cert-content"><h3>USFDA Certified</h3><p>Our manufacturing process complies with United States Food and Drug Administration standards for safety and quality.</div><div class="cert-badge">USFDA</div></div><div class="cert-item"><div class="cert-icon"><i class="fas fa-certificate"></i></div><div class="cert-content"><h3>ISO Certified</h3><p>International Organization for Standardization certification ensures consistent quality management systems across all processes.</div><div class="cert-badge">ISO</div></div><div class="cert-item"><div class="cert-icon"><i class="fas fa-flask"></i></div><div class="cert-content"><h3>WHO GMP</h3><p>World Health Organization Good Manufacturing Practices certification for pharmaceutical-grade production standards.</div><div class="cert-badge">WHO GMP</div></div><div class="cert-item"><div class="cert-icon"><i class="fas fa-microscope"></i></div><div class="cert-content"><h3>Quality Audited</h3><p>Every aspect has been independently audited including laboratory testing, stability, potency and product formulation.</div><div class="cert-badge">Audited</div></div><div class="cert-item"><div class="cert-icon"><i class="fas fa-industry"></i></div><div class="cert-content"><h3>Manufacturing Partner</h3><p>Manufactured and quality-controlled by <a href="https://lavanyahealthcarelimited.com/about.html"target="_blank"rel="noopener">Lavanya Healthcare Limited</a>.</div><div class="cert-badge">Partner</div></div></div></div><div class="scroll-indicators"><button class="scroll-btn cert-prev-btn"aria-label="Previous certification"><i class="fas fa-chevron-left"></i></button><div class="scroll-dots"><span class="active dot"></span> <span class="dot"></span> <span class="dot"></span></div><button class="scroll-btn cert-next-btn"aria-label="Next certification"><i class="fas fa-chevron-right"></i></button></div></section>
 
-<!-- ═══════════════════════════════════════════
-     ABOUT — brand story
-═══════════════════════════════════════════ -->
-<section class="about" id="about">
-    <div class="container">
-        <h2>Nutracosmetics for Ageless Youth</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <div class="desktop-text">
-                    <p>At Skinon, we believe that true beauty begins with optimal nutrition. Our scientifically formulated nutracosmetics combine the power of nutrition with advanced skincare to deliver visible, lasting results.</p>
-                    <p>Each product is crafted with premium ingredients that work from within to promote skin health, combat signs of aging, and enhance your natural radiance.</p>
-                    <p>Our philosophy is simple: when you nourish your body with the right nutrients, your skin reflects that inner health and vitality.</p>
-                </div>
-                <div class="mobile-text">
-                    <p>Beautiful skin starts from within. Skinon's science-backed nutracosmetics nourish your body to reveal your natural radiance and combat aging at its source.</p>
-                </div>
-            </div>
-            <div class="about-image">
-                <img src="about-model.webp" alt="Woman using Skinon nutracosmetics products for radiant skin" class="about-img" loading="lazy">
-            </div>
-        </div>
-    </div>
-</section>
+<section class="benefits"id="benefits"><div class="container"><h2>Visible Results</h2><div class="benefits-slider"><div class="benefits-track"><div class="fade-in benefit-card"><div class="benefit-icon"><i class="fas fa-heart"></i></div><h3>Promotes Youthful Skin</h3><p>Reduce signs of aging with our scientifically formulated nutracosmetic solutions designed to turn back the clock on your skin.</div><div class="fade-in benefit-card"><div class="benefit-icon"><i class="fas fa-bolt"></i></div><h3>Improves Skin Elasticity</h3><p>Restore firmness and suppleness to your skin from within. Our collagen-rich formulas rebuild the structural integrity of skin tissue.</div><div class="fade-in benefit-card"><div class="benefit-icon"><i class="fas fa-weight"></i></div><h3>Supports Weight Management</h3><p>Achieve your wellness goals with our metabolic support formulas. Boost your body's natural fat-burning processes safely and effectively.</div><div class="fade-in benefit-card"><div class="benefit-icon"><i class="fas fa-apple-alt"></i></div><h3>Balances Blood Sugar</h3><p>Maintain healthy glucose levels with our nutrient-rich formulations. Stable blood sugar means fewer cravings and sustained daily energy.</div><div class="fade-in benefit-card"><div class="benefit-icon"><i class="fas fa-battery-full"></i></div><h3>Boosts Energy</h3><p>Feel revitalized and energized throughout your day. Our formulas support mitochondrial function to power you through every moment.</div><div class="fade-in benefit-card"><div class="benefit-icon"><i class="fas fa-sun"></i></div><h3>Enhances Radiance</h3><p>Achieve a natural, healthy glow with our skin-nourishing antioxidant formulas. Brighten from within for luminous, even-toned skin.</div></div><div class="slider-nav"><button class="slider-btn benefits-prev-btn"aria-label="Previous benefit"><i class="fas fa-chevron-left"></i></button><div class="slider-dots"><div class="slider-dot active"data-slide="0"></div><div class="slider-dot"data-slide="1"></div><div class="slider-dot"data-slide="2"></div></div><button class="slider-btn benefits-next-btn"aria-label="Next benefit"><i class="fas fa-chevron-right"></i></button></div></div></div></section>
 
+<section class="why-choose"><div class="container"><h2>Why Choose Skinon</h2><div class="why-choose-slider"><div class="why-choose-track"><div class="fade-in feature-card"><div class="feature-icon"><i class="fas fa-flask"></i></div><h3>Clinically Researched</h3><p>Our formulas are backed by peer-reviewed scientific research and developed by leading experts in nutracosmetics and dermatology.</div><div class="fade-in feature-card"><div class="feature-icon"><i class="fas fa-apple-alt"></i></div><h3>Nutrition + Skincare</h3><p>We combine the power of nutrition with advanced skincare technology for visible, lasting results that topical products cannot achieve alone.</div><div class="fade-in feature-card"><div class="feature-icon"><i class="fas fa-gem"></i></div><h3>Premium Ingredients</h3><p>We source only the highest quality, bioavailable ingredients from certified suppliers for maximum efficacy and safety in every capsule.</div><div class="fade-in feature-card"><div class="feature-icon"><i class="fas fa-chart-line"></i></div><h3>Visible Results</h3><p>Experience noticeable improvements in skin texture, tone, and vitality in just 4–8 weeks of consistent daily use.</div><div class="fade-in feature-card"><div class="feature-icon"><i class="fas fa-award"></i></div><h3>Quality Guaranteed</h3><p>All our products undergo rigorous third-party testing for potency, purity, and safety before reaching your hands. USFDA & ISO compliant.</div><div class="fade-in feature-card"><div class="feature-icon"><i class="fas fa-heart"></i></div><h3>Customer Focused</h3><p>Your satisfaction and wellbeing is our priority. Our skincare experts are available to guide you on your personal skin health journey.</div></div><div class="slider-nav"><button class="slider-btn whychoose-prev-btn"aria-label="Previous feature"><i class="fas fa-chevron-left"></i></button><div class="slider-dots"><div class="slider-dot active"data-slide="0"></div><div class="slider-dot"data-slide="1"></div><div class="slider-dot"data-slide="2"></div></div><button class="slider-btn whychoose-next-btn"aria-label="Next feature"><i class="fas fa-chevron-right"></i></button></div></div></div></section>
 
-<!-- ═══════════════════════════════════════════
-     PRODUCTS — minimal cards: image · name · price · buttons
-     Clicking image or name → individual product page
-     Clicking Buy Now → Amazon listing (new tab)
-═══════════════════════════════════════════ -->
-<section class="products" id="products">
-    <div class="container">
-        <h2>Our Premium Solutions</h2>
+<section class="contact"id="contact"><div class="container"><h2>Get in Touch</h2><div class="contact-container"><div class="fade-in contact-info"><h3>Talk to Our Skin Experts</h3><p>Ready to transform your skin health? Contact us to learn more about our premium nutracosmetics and find the perfect solution for your needs.<p>Our skincare experts are available to answer your questions and guide you on your journey to ageless beauty.<div class="contact-details"><div class="contact-detail-item"><i class="fas fa-envelope"></i> <span>info@skinon.com</span></div><div class="contact-detail-item"><i class="fab fa-whatsapp"></i> <a href="https://wa.me/917895193023?text=Hi%20Skinon%20Team%2C%20I'm%20interested%20in%20your%20nutracosmetics%20products."class="whatsapp-link"rel="noopener"target="_blank">+91 78951 93023</a></div><div class="contact-detail-item"><i class="fas fa-map-marker-alt"></i> <span>83V9+VVH Mayur Vihar, Dehradun, Uttarakhand</span></div></div><div class="social-links"><a href="#"aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i></a> <a href="#"aria-label="Follow us on Facebook"><i class="fab fa-facebook-f"></i></a> <a href="#"aria-label="Watch us on YouTube"><i class="fab fa-youtube"></i></a> <a href="https://wa.me/917895193023?text=Hi%20Skinon%20Team%2C%20I'm%20interested%20in%20your%20nutracosmetics%20products."class="whatsapp-link"rel="noopener"target="_blank"aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a></div></div><div class="fade-in contact-form"><h3>Send Us a Message</h3><form id="enquiry-form"novalidate><div class="form-group"><label for="name">Your Name</label> <input id="name"name="name"placeholder="Enter your full name"required></div><div class="form-group"><label for="email">Email Address</label> <input id="email"name="email"placeholder="Enter your email address"required type="email"></div><div class="form-group"><label for="phone">Phone Number <span style="font-weight:400;color:#aaa">(optional)</span></label> <input id="phone"name="phone"placeholder="+91 00000 00000"type="tel"></div><div class="form-group"><label for="message">Your Message</label> <textarea id="message"name="message"placeholder="Tell us about your skin concerns or ask a question..."required rows="4"></textarea></div><button class="btn"style="width:100%"type="submit">Send Message</button></form></div></div></div></section>
 
-        <div class="product-categories">
-            <button class="category-btn active" data-category="all">All Products</button>
-            <button class="category-btn" data-category="anti-aging">Anti-Ageing Solutions</button>
-            <button class="category-btn" data-category="skin-glow">Skin Glow &amp; Hydration</button>
-            <button class="category-btn" data-category="wellness">Weight Management &amp; Wellness</button>
-        </div>
+<footer><div class="container"><div class="footer-container"><div class="footer-col"><h3>SkinonNutra</h3><p>Bringing Skin Health Through Nutrition. Our premium nutracosmetics combine science and nature for visible, lasting results from within.<div class="social-links"style="margin-top:16px"><a href="#"aria-label="Instagram"><i class="fab fa-instagram"></i></a> <a href="#"aria-label="Facebook"><i class="fab fa-facebook-f"></i></a> <a href="#"aria-label="YouTube"><i class="fab fa-youtube"></i></a> <a href="https://wa.me/917895193023"class="whatsapp-link"rel="noopener"target="_blank"aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></div></div><div class="footer-col"><h3>Quick Links</h3><ul><li><a href="#home">Home</a><li><a href="#about">About Us</a><li><a href="#products">Products</a><li><a href="#certifications">Certifications</a><li><a href="#benefits">Benefits</a><li><a href="#contact">Contact</a></ul></div><div class="footer-col"><h3>Our Products</h3><ul><li><a href="product-collagen.html">Collagen Elixir</a><li><a href="product-glow.html">Glow Enhancer</a><li><a href="product-metabolic.html">Metabolic Boost</a><li><a href="#products">Anti-Ageing Solutions</a><li><a href="#products">Skin Glow &amp; Hydration</a><li><a href="#products">Weight Management</a></ul></div><div class="footer-col"><h3>Contact Info</h3><ul><li><i class="fas fa-envelope"></i> info@skinon.com<li><a href="https://wa.me/917895193023?text=Hi%20Skinon%20Team%2C%20I'm%20interested%20in%20your%20nutracosmetics%20products."class="whatsapp-link"rel="noopener"target="_blank"><i class="fab fa-whatsapp"></i> +91 78951 93023</a><li><i class="fas fa-map-marker-alt"></i> 83V9+VVH Mayur Vihar, Dehradun, Uttarakhand<li><i class="fas fa-clock"></i> Mon–Sat: 10:00 AM – 6:00 PM IST</ul></div></div><div class="footer-bottom"><div class="copyright"><p>© 2025 SkinonNutra. All rights reserved.</div><div class="footer-links"><a href="#">Privacy Policy</a> <a href="#">Terms of Use</a> <a href="#">Refund Policy</a></div></div></div></footer>
 
-        <div class="product-grid" id="productGrid">
+<button aria-label="Scroll to top"id="scrollTopBtn"title="Back to top"><i class="fas fa-arrow-up"></i></button>
+<script src="files.js"></script>
 
-            <!-- ── Product 1: Collagen Elixir ── -->
-            <div class="product-card fade-in" data-category="anti-aging">
-                <a href="product-collagen.html" class="product-img-link">
-                    <div class="product-image">
-                        <img src="products/anti ageing.webp" alt="Collagen Elixir – Anti-Ageing supplement bottle" class="product-img" loading="lazy">
-                    </div>
-                </a>
-                <div class="product-info">
-                    <a href="product-collagen.html" class="product-name-link">
-                        <h3>Collagen Elixir</h3>
-                    </a>
-                    <p class="product-category-tag">Anti-Ageing</p>
-                    <p class="product-price">₹999 <span class="product-price-mrp">₹1,499</span></p>
-                    <div class="product-card-actions">
-                        <a href="product-collagen.html" class="view-details-btn">View Details</a>
-                        <a href="https://amzn.in/d/7fDSH8P" target="_blank" rel="noopener" class="buy-now-btn amazon-btn">
-                            <i class="fas fa-shopping-cart"></i> Buy Now
-                        </a>
-                    </div>
-                </div>
-            </div>
+<script>
+// Dot indicator – syncs with scroll position on mobile
+(function () {
+  var grid = document.getElementById('productGrid');
+  var dots = document.querySelectorAll('.product-scroll-dots .dot');
+  if (!grid || !dots.length) return;
 
-            <!-- ── Product 2: Glow Enhancer ── -->
-            <div class="product-card fade-in" data-category="skin-glow">
-                <a href="product-glow.html" class="product-img-link">
-                    <div class="product-image">
-                        <img src="products/skin glow.webp" alt="Glow Enhancer – Vitamin C & E skin brightening supplement" class="product-img" loading="lazy">
-                    </div>
-                </a>
-                <div class="product-info">
-                    <a href="product-glow.html" class="product-name-link">
-                        <h3>Glow Enhancer</h3>
-                    </a>
-                    <p class="product-category-tag">Skin Glow &amp; Hydration</p>
-                    <p class="product-price">₹849 <span class="product-price-mrp">₹1,299</span></p>
-                    <div class="product-card-actions">
-                        <a href="product-glow.html" class="view-details-btn">View Details</a>
-                        <a href="https://amzn.in/d/7fDSH8P" target="_blank" rel="noopener" class="buy-now-btn amazon-btn">
-                            <i class="fas fa-shopping-cart"></i> Buy Now
-                        </a>
-                    </div>
-                </div>
-            </div>
+  function updateDots() {
+    var cards = grid.querySelectorAll('.product-card');
+    if (!cards.length) return;
+    var cardWidth = cards[0].offsetWidth + 16; // 16 = gap
+    var activeIndex = Math.round(grid.scrollLeft / cardWidth);
+    dots.forEach(function (dot, i) {
+      dot.classList.toggle('active', i === activeIndex);
+    });
+  }
 
-            <!-- ── Product 3: Metabolic Boost ── -->
-            <div class="product-card fade-in" data-category="wellness">
-                <a href="product-metabolic.html" class="product-img-link">
-                    <div class="product-image">
-                        <img src="products/slim product.webp" alt="Metabolic Boost – L-Carnitine & ACV weight management supplement" class="product-img" loading="lazy">
-                    </div>
-                </a>
-                <div class="product-info">
-                    <a href="product-metabolic.html" class="product-name-link">
-                        <h3>Metabolic Boost</h3>
-                    </a>
-                    <p class="product-category-tag">Weight Management</p>
-                    <p class="product-price">₹899 <span class="product-price-mrp">₹1,399</span></p>
-                    <div class="product-card-actions">
-                        <a href="product-metabolic.html" class="view-details-btn">View Details</a>
-                        <a href="https://amzn.in/d/7fDSH8P" target="_blank" rel="noopener" class="buy-now-btn amazon-btn">
-                            <i class="fas fa-shopping-cart"></i> Buy Now
-                        </a>
-                    </div>
-                </div>
-            </div>
+  grid.addEventListener('scroll', updateDots, { passive: true });
 
-        </div>
-    </div>
-</section>
-
-
-<!-- ═══════════════════════════════════════════
-     CERTIFICATIONS — horizontally scrollable cards
-═══════════════════════════════════════════ -->
-<section class="certifications-section" id="certifications">
-    <div class="section-header">
-        <h2>Quality Certifications</h2>
-        <p>Skinon Nutricosmetics products are manufactured with the highest quality standards, verified by independent third-party certifications.</p>
-    </div>
-
-    <div class="certifications-horizontal-container">
-        <div class="certifications-row">
-
-            <div class="cert-item">
-                <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
-                <div class="cert-content">
-                    <h3>USFDA Certified</h3>
-                    <p>Our manufacturing process complies with United States Food and Drug Administration standards for safety and quality.</p>
-                </div>
-                <div class="cert-badge">USFDA</div>
-            </div>
-
-            <div class="cert-item">
-                <div class="cert-icon"><i class="fas fa-certificate"></i></div>
-                <div class="cert-content">
-                    <h3>ISO Certified</h3>
-                    <p>International Organization for Standardization certification ensures consistent quality management systems across all processes.</p>
-                </div>
-                <div class="cert-badge">ISO</div>
-            </div>
-
-            <div class="cert-item">
-                <div class="cert-icon"><i class="fas fa-flask"></i></div>
-                <div class="cert-content">
-                    <h3>WHO GMP</h3>
-                    <p>World Health Organization Good Manufacturing Practices certification for pharmaceutical-grade production standards.</p>
-                </div>
-                <div class="cert-badge">WHO GMP</div>
-            </div>
-
-            <div class="cert-item">
-                <div class="cert-icon"><i class="fas fa-microscope"></i></div>
-                <div class="cert-content">
-                    <h3>Quality Audited</h3>
-                    <p>Every aspect has been independently audited including laboratory testing, stability, potency and product formulation.</p>
-                </div>
-                <div class="cert-badge">Audited</div>
-            </div>
-
-            <div class="cert-item">
-                <div class="cert-icon"><i class="fas fa-industry"></i></div>
-                <div class="cert-content">
-                    <h3>Manufacturing Partner</h3>
-                    <p>Manufactured and quality-controlled by <a href="https://lavanyahealthcarelimited.com/about.html" target="_blank" rel="noopener">Lavanya Healthcare Limited</a>.</p>
-                </div>
-                <div class="cert-badge">Partner</div>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="scroll-indicators">
-        <button class="scroll-btn cert-prev-btn" aria-label="Previous certification">
-            <i class="fas fa-chevron-left"></i>
-        </button>
-        <div class="scroll-dots">
-            <span class="dot active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-        </div>
-        <button class="scroll-btn cert-next-btn" aria-label="Next certification">
-            <i class="fas fa-chevron-right"></i>
-        </button>
-    </div>
-</section>
-
-
-<!-- ═══════════════════════════════════════════
-     BENEFITS — sliding cards (3 visible at a time on desktop)
-═══════════════════════════════════════════ -->
-<section class="benefits" id="benefits">
-    <div class="container">
-        <h2>Visible Results</h2>
-        <div class="benefits-slider">
-            <div class="benefits-track">
-
-                <div class="benefit-card fade-in">
-                    <div class="benefit-icon"><i class="fas fa-heart"></i></div>
-                    <h3>Promotes Youthful Skin</h3>
-                    <p>Reduce signs of aging with our scientifically formulated nutracosmetic solutions designed to turn back the clock on your skin.</p>
-                </div>
-
-                <div class="benefit-card fade-in">
-                    <div class="benefit-icon"><i class="fas fa-bolt"></i></div>
-                    <h3>Improves Skin Elasticity</h3>
-                    <p>Restore firmness and suppleness to your skin from within. Our collagen-rich formulas rebuild the structural integrity of skin tissue.</p>
-                </div>
-
-                <div class="benefit-card fade-in">
-                    <div class="benefit-icon"><i class="fas fa-weight"></i></div>
-                    <h3>Supports Weight Management</h3>
-                    <p>Achieve your wellness goals with our metabolic support formulas. Boost your body's natural fat-burning processes safely and effectively.</p>
-                </div>
-
-                <div class="benefit-card fade-in">
-                    <div class="benefit-icon"><i class="fas fa-apple-alt"></i></div>
-                    <h3>Balances Blood Sugar</h3>
-                    <p>Maintain healthy glucose levels with our nutrient-rich formulations. Stable blood sugar means fewer cravings and sustained daily energy.</p>
-                </div>
-
-                <div class="benefit-card fade-in">
-                    <div class="benefit-icon"><i class="fas fa-battery-full"></i></div>
-                    <h3>Boosts Energy</h3>
-                    <p>Feel revitalized and energized throughout your day. Our formulas support mitochondrial function to power you through every moment.</p>
-                </div>
-
-                <div class="benefit-card fade-in">
-                    <div class="benefit-icon"><i class="fas fa-sun"></i></div>
-                    <h3>Enhances Radiance</h3>
-                    <p>Achieve a natural, healthy glow with our skin-nourishing antioxidant formulas. Brighten from within for luminous, even-toned skin.</p>
-                </div>
-
-            </div>
-            <div class="slider-nav">
-                <button class="slider-btn benefits-prev-btn" aria-label="Previous benefit"><i class="fas fa-chevron-left"></i></button>
-                <div class="slider-dots">
-                    <div class="slider-dot active" data-slide="0"></div>
-                    <div class="slider-dot" data-slide="1"></div>
-                    <div class="slider-dot" data-slide="2"></div>
-                </div>
-                <button class="slider-btn benefits-next-btn" aria-label="Next benefit"><i class="fas fa-chevron-right"></i></button>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!-- ═══════════════════════════════════════════
-     WHY CHOOSE SKINON — sliding feature cards
-═══════════════════════════════════════════ -->
-<section class="why-choose">
-    <div class="container">
-        <h2>Why Choose Skinon</h2>
-        <div class="why-choose-slider">
-            <div class="why-choose-track">
-
-                <div class="feature-card fade-in">
-                    <div class="feature-icon"><i class="fas fa-flask"></i></div>
-                    <h3>Clinically Researched</h3>
-                    <p>Our formulas are backed by peer-reviewed scientific research and developed by leading experts in nutracosmetics and dermatology.</p>
-                </div>
-
-                <div class="feature-card fade-in">
-                    <div class="feature-icon"><i class="fas fa-apple-alt"></i></div>
-                    <h3>Nutrition + Skincare</h3>
-                    <p>We combine the power of nutrition with advanced skincare technology for visible, lasting results that topical products cannot achieve alone.</p>
-                </div>
-
-                <div class="feature-card fade-in">
-                    <div class="feature-icon"><i class="fas fa-gem"></i></div>
-                    <h3>Premium Ingredients</h3>
-                    <p>We source only the highest quality, bioavailable ingredients from certified suppliers for maximum efficacy and safety in every capsule.</p>
-                </div>
-
-                <div class="feature-card fade-in">
-                    <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
-                    <h3>Visible Results</h3>
-                    <p>Experience noticeable improvements in skin texture, tone, and vitality in just 4–8 weeks of consistent daily use.</p>
-                </div>
-
-                <div class="feature-card fade-in">
-                    <div class="feature-icon"><i class="fas fa-award"></i></div>
-                    <h3>Quality Guaranteed</h3>
-                    <p>All our products undergo rigorous third-party testing for potency, purity, and safety before reaching your hands. USFDA &amp; ISO compliant.</p>
-                </div>
-
-                <div class="feature-card fade-in">
-                    <div class="feature-icon"><i class="fas fa-heart"></i></div>
-                    <h3>Customer Focused</h3>
-                    <p>Your satisfaction and wellbeing is our priority. Our skincare experts are available to guide you on your personal skin health journey.</p>
-                </div>
-
-            </div>
-            <div class="slider-nav">
-                <button class="slider-btn whychoose-prev-btn" aria-label="Previous feature"><i class="fas fa-chevron-left"></i></button>
-                <div class="slider-dots">
-                    <div class="slider-dot active" data-slide="0"></div>
-                    <div class="slider-dot" data-slide="1"></div>
-                    <div class="slider-dot" data-slide="2"></div>
-                </div>
-                <button class="slider-btn whychoose-next-btn" aria-label="Next feature"><i class="fas fa-chevron-right"></i></button>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!-- ═══════════════════════════════════════════
-     TESTIMONIALS — customer reviews
-═══════════════════════════════════════════ -->
-<section class="testimonials" id="testimonials">
-    <div class="container">
-        <h2>What Our Customers Say</h2>
-        <div class="testimonials-grid">
-
-            <div class="testimonial-card fade-in">
-                <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text">"After using Skinon's Collagen Elixir for just 4 weeks, I've noticed a significant improvement in my skin's texture and elasticity. My fine lines have diminished and I feel more confident than ever!"</p>
-                <div class="testimonial-author">
-                    <div class="testimonial-avatar">SJ</div>
-                    <div>
-                        <p class="testimonial-name">Sarah J.</p>
-                        <p class="testimonial-product">Collagen Elixir · Verified Purchase</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="testimonial-card fade-in">
-                <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text">"The Metabolic Boost formula has been a game-changer for my wellness journey. I've lost 8 pounds in 2 months without drastic diet changes, and I have so much more energy throughout the day."</p>
-                <div class="testimonial-author">
-                    <div class="testimonial-avatar">MT</div>
-                    <div>
-                        <p class="testimonial-name">Michael T.</p>
-                        <p class="testimonial-product">Metabolic Boost · Verified Purchase</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="testimonial-card fade-in">
-                <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text">"I've struggled with dull skin for years. The Glow Enhancer has given me the radiant complexion I've always wanted. My friends keep asking what I'm doing differently — I tell them it's Skinon!"</p>
-                <div class="testimonial-author">
-                    <div class="testimonial-avatar">ER</div>
-                    <div>
-                        <p class="testimonial-name">Emily R.</p>
-                        <p class="testimonial-product">Glow Enhancer · Verified Purchase</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-
-<!-- ═══════════════════════════════════════════
-     CONTACT — enquiry form + social links
-═══════════════════════════════════════════ -->
-<section class="contact" id="contact">
-    <div class="container">
-        <h2>Get in Touch</h2>
-        <div class="contact-container">
-
-            <div class="contact-info fade-in">
-                <h3>Talk to Our Skin Experts</h3>
-                <p>Ready to transform your skin health? Contact us to learn more about our premium nutracosmetics and find the perfect solution for your needs.</p>
-                <p>Our skincare experts are available to answer your questions and guide you on your journey to ageless beauty.</p>
-
-                <div class="contact-details">
-                    <div class="contact-detail-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>info@skinon.com</span>
-                    </div>
-                    <div class="contact-detail-item">
-                        <i class="fab fa-whatsapp"></i>
-                        <a href="https://wa.me/917895193023?text=Hi%20Skinon%20Team%2C%20I'm%20interested%20in%20your%20nutracosmetics%20products." target="_blank" rel="noopener" class="whatsapp-link">+91 78951 93023</a>
-                    </div>
-                    <div class="contact-detail-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>83V9+VVH Mayur Vihar, Dehradun, Uttarakhand</span>
-                    </div>
-                </div>
-
-                <div class="social-links">
-                    <a href="#" aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="Follow us on Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" aria-label="Watch us on YouTube"><i class="fab fa-youtube"></i></a>
-                    <a href="https://wa.me/917895193023?text=Hi%20Skinon%20Team%2C%20I'm%20interested%20in%20your%20nutracosmetics%20products." target="_blank" rel="noopener" class="whatsapp-link" aria-label="Chat on WhatsApp">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="contact-form fade-in">
-                <h3>Send Us a Message</h3>
-                <form id="enquiry-form" novalidate>
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number <span style="font-weight:400;color:#aaa">(optional)</span></label>
-                        <input type="tel" id="phone" name="phone" placeholder="+91 00000 00000">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Your Message</label>
-                        <textarea id="message" name="message" rows="4" placeholder="Tell us about your skin concerns or ask a question..." required></textarea>
-                    </div>
-                    <button type="submit" class="btn" style="width:100%">Send Message</button>
-                </form>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-
-<!-- ═══════════════════════════════════════════
-     FOOTER
-═══════════════════════════════════════════ -->
-<footer>
-    <div class="container">
-        <div class="footer-container">
-
-            <div class="footer-col">
-                <h3>SkinonNutra</h3>
-                <p>Bringing Skin Health Through Nutrition. Our premium nutracosmetics combine science and nature for visible, lasting results from within.</p>
-                <div class="social-links" style="margin-top:16px">
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    <a href="https://wa.me/917895193023" target="_blank" rel="noopener" class="whatsapp-link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                </div>
-            </div>
-
-            <div class="footer-col">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#certifications">Certifications</a></li>
-                    <li><a href="#benefits">Benefits</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <h3>Our Products</h3>
-                <ul>
-                    <li><a href="product-collagen.html">Collagen Elixir</a></li>
-                    <li><a href="product-glow.html">Glow Enhancer</a></li>
-                    <li><a href="product-metabolic.html">Metabolic Boost</a></li>
-                    <li><a href="#products">Anti-Ageing Solutions</a></li>
-                    <li><a href="#products">Skin Glow &amp; Hydration</a></li>
-                    <li><a href="#products">Weight Management</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <h3>Contact Info</h3>
-                <ul>
-                    <li><i class="fas fa-envelope"></i> info@skinon.com</li>
-                    <li>
-                        <a href="https://wa.me/917895193023?text=Hi%20Skinon%20Team%2C%20I'm%20interested%20in%20your%20nutracosmetics%20products." target="_blank" rel="noopener" class="whatsapp-link">
-                            <i class="fab fa-whatsapp"></i> +91 78951 93023
-                        </a>
-                    </li>
-                    <li><i class="fas fa-map-marker-alt"></i> 83V9+VVH Mayur Vihar, Dehradun, Uttarakhand</li>
-                    <li><i class="fas fa-clock"></i> Mon–Sat: 10:00 AM – 6:00 PM IST</li>
-                </ul>
-            </div>
-
-        </div>
-
-        <div class="footer-bottom">
-            <div class="copyright">
-                <p>&copy; 2025 SkinonNutra. All rights reserved.</p>
-            </div>
-            <div class="footer-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Use</a>
-                <a href="#">Refund Policy</a>
-            </div>
-        </div>
-    </div>
-</footer>
-
-
-<!-- Scroll to top button -->
-<button id="scrollTopBtn" title="Back to top" aria-label="Scroll to top">
-    <i class="fas fa-arrow-up"></i>
-</button>
-
-<script src="files.js" defer></script>
-
-</body>
-</html>
+  // Click dot → scroll to matching card
+  dots.forEach(function (dot, i) {
+    dot.addEventListener('click', function () {
+      var cards = grid.querySelectorAll('.product-card');
+      if (cards[i]) {
+        cards[i].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+      }
+    });
+  });
+})();
+</script>
